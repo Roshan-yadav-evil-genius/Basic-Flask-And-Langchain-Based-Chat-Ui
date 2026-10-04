@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LangChain Stream</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="chat-app" id="chat-app">
+    <header class="header">
+      <span class="model-tag">Flask + Langchain Chat ui</span>
+      <div class="header-actions">
+        <button id="mode-btn" type="button" class="btn-mode" title="Toggle Normal / Verbose Tool Tracing">Normal</button>
+        <button id="reset-btn" type="button" class="btn-reset">Reset</button>
+      </div>
+    </header>
+
+    <main id="chat-feed" class="feed"></main>
+
+    <footer class="footer">
+      <form id="chat-form" class="input-form">
+        <textarea id="prompt-input" rows="1" placeholder="Type a message..." autofocus></textarea>
+        <button id="send-btn" type="submit" class="btn-submit">Send</button>
+      </form>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
